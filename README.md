@@ -6,7 +6,7 @@ if theres anything wrong with the script, maybe i got the threading all wrong, m
 feel free to contact on discord: manjoos#0745
 
 ### Results
-'''
+```
 Threaded XOR:
 .*++
 Milliseconds: 292
@@ -14,4 +14,4 @@ Milliseconds: 292
 Normal XOR:
 .*++
 Milliseconds: 5
-'''
+```
