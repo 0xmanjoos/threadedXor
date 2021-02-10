@@ -15,10 +15,8 @@ char key[] = {'D', 'E', 'A', 'D', 'B', 'E', 'E', 'F'};
 
 void xorEncrypt(string input) {
     string temp = input;
-
     for (int i = 0; i < input.size(); i++)
         temp[i] = input[i] ^ key[i % (sizeof(key) / sizeof(key[0]))];
-
     cout<< temp<<"\n";
     // flushing takes too long
 }
@@ -34,19 +32,14 @@ void threadXor(const char* arr[], int th) {
 }
 
 void normalXor(const char* arr[], int iter) {
-
     for(int e=1; e<iter; e++) {
         xorEncrypt(arr[e]);
     }
-
 }
-
-
 int main(int argc, const char * argv[]) {
     if(argc<=1) {
         cout<<"Usage: " << argv[0] << " <string> <string> <etc..>";
     } else {
-
         // timer for threaded
         cout<<"Threaded XOR: \n";
         auto start=std::chrono::high_resolution_clock::now();
